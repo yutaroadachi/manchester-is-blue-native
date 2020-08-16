@@ -1,0 +1,6 @@
+export const ROUTE_NAME = {
+  HOME: 'HOME',
+  GAME_DETAIL: 'GAME_DETAIL',
+  PLAYERS: 'PLAYERS',
+  PLAYER_DETAIL: 'PLAYER_DETAIL',
+} as const;
