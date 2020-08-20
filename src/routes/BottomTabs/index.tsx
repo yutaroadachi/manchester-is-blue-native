@@ -19,6 +19,7 @@ export const BottomTabs = () => {
       initialRouteName={ROUTE_NAME.HOME}
       tabBarOptions={{
         activeTintColor: COLOR_PALETTE.ACCENT,
+        style: { backgroundColor: COLOR_PALETTE.MAIN },
       }}
     >
       <Tab.Screen
