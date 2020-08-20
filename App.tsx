@@ -8,9 +8,9 @@ const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: COLOR_PALETTE.MAIN,
+    primary: COLOR_PALETTE.PRIMARY,
     accent: COLOR_PALETTE.ACCENT,
-    background: COLOR_PALETTE.BASE,
+    background: COLOR_PALETTE.BACKGROUND,
   },
 };
 

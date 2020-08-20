@@ -16,7 +16,7 @@ export const PlayerStack = () => {
     <Stack.Navigator
       initialRouteName={ROUTE_NAME.PLAYERS}
       screenOptions={{
-        headerStyle: { backgroundColor: COLOR_PALETTE.MAIN },
+        headerStyle: { backgroundColor: COLOR_PALETTE.PRIMARY },
         headerTintColor: COLOR_PALETTE.ACCENT,
         headerBackTitleVisible: false,
       }}
