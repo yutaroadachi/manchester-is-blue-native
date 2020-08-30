@@ -1,7 +1,7 @@
 import React from 'react';
 import { ROUTES } from '../../constants/routes';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { COLOR_PALETTE } from '../../constants/colorPalette';
+import { THEME } from '../../constants/theme';
 import { HomeStack } from '../HomeStack';
 import { PlayerStack } from '../PlayerStack';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -18,8 +18,8 @@ export const BottomTabs = () => {
     <Tab.Navigator
       initialRouteName={ROUTES.HOME}
       tabBarOptions={{
-        activeTintColor: COLOR_PALETTE.ACCENT,
-        style: { backgroundColor: COLOR_PALETTE.PRIMARY },
+        activeTintColor: THEME.ACCENT,
+        style: { backgroundColor: THEME.PRIMARY },
       }}
     >
       <Tab.Screen

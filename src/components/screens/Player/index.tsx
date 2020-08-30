@@ -5,7 +5,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Card, Title } from 'react-native-paper';
 import { MaterialIcons } from '@expo/vector-icons';
 import { ROUTES } from '../../../constants/routes';
-import { COLOR_PALETTE } from '../../../constants/colorPalette';
+import { THEME } from '../../../constants/theme';
 
 type Props = {
   navigation: Navigation;
@@ -108,7 +108,7 @@ const CardsByPosition = ({
 }: CardsByPositionProps) => {
   return (
     <>
-      <Title style={{ color: COLOR_PALETTE.ACCENT }}>{position}</Title>
+      <Title style={{ color: THEME.ACCENT }}>{position}</Title>
       {players.length > 0 && (
         <View style={styles.cards}>
           {players.map((player, index) => (
@@ -118,11 +118,7 @@ const CardsByPosition = ({
               onPress={() => navigation.navigate(ROUTES.PLAYER_DETAIL)}
             >
               <View style={styles.cardHeader}>
-                <MaterialIcons
-                  name="person"
-                  size={64}
-                  color={COLOR_PALETTE.PRIMARY}
-                />
+                <MaterialIcons name="person" size={64} color={THEME.PRIMARY} />
                 {player.uniformNumber && (
                   <Text style={styles.uniformNumber}>
                     {player.uniformNumber}
@@ -167,7 +163,7 @@ const styles = StyleSheet.create({
   uniformNumber: {
     fontSize: 32,
     fontWeight: '600',
-    color: COLOR_PALETTE.PRIMARY,
+    color: THEME.PRIMARY,
     position: 'absolute',
     top: 0,
     right: 0,
@@ -175,6 +171,6 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 16,
     fontWeight: '600',
-    color: COLOR_PALETTE.ACCENT,
+    color: THEME.ACCENT,
   },
 });
