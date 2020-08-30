@@ -1,10 +1,11 @@
 import React from 'react';
-import { ROUTES } from '../../constants/routes';
+import { MaterialIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { THEME } from '../../constants/theme';
+
 import { HomeStack } from '../HomeStack';
 import { PlayerStack } from '../PlayerStack';
-import { MaterialIcons } from '@expo/vector-icons';
+import { ROUTES } from '../../constants/routes';
+import { THEME } from '../../constants/theme';
 
 type ParamList = {
   [ROUTES.HOME]: undefined;

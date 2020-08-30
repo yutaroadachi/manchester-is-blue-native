@@ -1,8 +1,9 @@
 import React from 'react';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { ParamList } from '../../../routes/HomeStack';
 import { ScrollView, View, Text, StyleSheet } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { Card } from 'react-native-paper';
+
+import { ParamList } from '../../../routes/HomeStack';
 import { ROUTES } from '../../../constants/routes';
 
 type Props = {

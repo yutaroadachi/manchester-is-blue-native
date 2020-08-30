@@ -1,7 +1,8 @@
 import React from 'react';
-import { ROUTES } from '../../constants/routes';
 import { createStackNavigator } from '@react-navigation/stack';
+
 import { Player, PlayerDetail } from '../../components/screens';
+import { ROUTES } from '../../constants/routes';
 import { THEME } from '../../constants/theme';
 
 export type ParamList = {

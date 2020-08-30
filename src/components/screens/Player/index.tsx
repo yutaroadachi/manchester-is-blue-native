@@ -1,9 +1,10 @@
 import React from 'react';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { ParamList } from '../../../routes/PlayerStack';
 import { View, Text, StyleSheet } from 'react-native';
-import { Card, Title } from 'react-native-paper';
 import { MaterialIcons } from '@expo/vector-icons';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { Card, Title } from 'react-native-paper';
+
+import { ParamList } from '../../../routes/PlayerStack';
 import { ROUTES } from '../../../constants/routes';
 import { THEME } from '../../../constants/theme';
 

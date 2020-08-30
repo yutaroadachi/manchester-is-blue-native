@@ -1,7 +1,8 @@
 import React from 'react';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { ParamList } from '../../../routes/HomeStack';
 import { View, Text, Button } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
+
+import { ParamList } from '../../../routes/HomeStack';
 import { ROUTES } from '../../../constants/routes';
 
 type Props = {
