@@ -3,10 +3,10 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { ParamList } from '../../../routes/HomeStack';
 import { ScrollView, View, Text, StyleSheet } from 'react-native';
 import { Card } from 'react-native-paper';
-import { ROUTE_NAME } from '../../../constants/routeName';
+import { ROUTES } from '../../../constants/routes';
 
 type Props = {
-  navigation: StackNavigationProp<ParamList, typeof ROUTE_NAME.HOME>;
+  navigation: StackNavigationProp<ParamList, typeof ROUTES.HOME>;
 };
 
 const games = [
@@ -83,7 +83,7 @@ export const Home = (props: Props) => {
           <Card
             key={i}
             style={{ marginBottom: 16 }}
-            onPress={() => props.navigation.navigate(ROUTE_NAME.GAME_DETAIL)}
+            onPress={() => props.navigation.navigate(ROUTES.GAME_DETAIL)}
           >
             <Card.Content>
               <Text style={{ marginBottom: 16 }}>

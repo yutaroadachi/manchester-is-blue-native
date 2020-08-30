@@ -4,14 +4,14 @@ import { ParamList } from '../../../routes/PlayerStack';
 import { View, Text, StyleSheet } from 'react-native';
 import { Card, Title } from 'react-native-paper';
 import { MaterialIcons } from '@expo/vector-icons';
-import { ROUTE_NAME } from '../../../constants/routeName';
+import { ROUTES } from '../../../constants/routes';
 import { COLOR_PALETTE } from '../../../constants/colorPalette';
 
 type Props = {
   navigation: Navigation;
 };
 
-type Navigation = StackNavigationProp<ParamList, typeof ROUTE_NAME.PLAYERS>;
+type Navigation = StackNavigationProp<ParamList, typeof ROUTES.PLAYERS>;
 
 type Player = {
   firstName: string;
@@ -115,7 +115,7 @@ const CardsByPosition = ({
             <Card
               key={index}
               style={styles.card}
-              onPress={() => navigation.navigate(ROUTE_NAME.PLAYER_DETAIL)}
+              onPress={() => navigation.navigate(ROUTES.PLAYER_DETAIL)}
             >
               <View style={styles.cardHeader}>
                 <MaterialIcons

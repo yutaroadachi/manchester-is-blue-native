@@ -1,5 +1,5 @@
 import React from 'react';
-import { ROUTE_NAME } from '../../constants/routeName';
+import { ROUTES } from '../../constants/routes';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { COLOR_PALETTE } from '../../constants/colorPalette';
 import { HomeStack } from '../HomeStack';
@@ -7,8 +7,8 @@ import { PlayerStack } from '../PlayerStack';
 import { MaterialIcons } from '@expo/vector-icons';
 
 type ParamList = {
-  [ROUTE_NAME.HOME]: undefined;
-  [ROUTE_NAME.PLAYERS]: undefined;
+  [ROUTES.HOME]: undefined;
+  [ROUTES.PLAYERS]: undefined;
 };
 
 const Tab = createBottomTabNavigator<ParamList>();
@@ -16,14 +16,14 @@ const Tab = createBottomTabNavigator<ParamList>();
 export const BottomTabs = () => {
   return (
     <Tab.Navigator
-      initialRouteName={ROUTE_NAME.HOME}
+      initialRouteName={ROUTES.HOME}
       tabBarOptions={{
         activeTintColor: COLOR_PALETTE.ACCENT,
         style: { backgroundColor: COLOR_PALETTE.PRIMARY },
       }}
     >
       <Tab.Screen
-        name={ROUTE_NAME.HOME}
+        name={ROUTES.HOME}
         component={HomeStack}
         options={{
           title: 'ホーム',
@@ -33,7 +33,7 @@ export const BottomTabs = () => {
         }}
       />
       <Tab.Screen
-        name={ROUTE_NAME.PLAYERS}
+        name={ROUTES.PLAYERS}
         component={PlayerStack}
         options={{
           title: '選手一覧',

@@ -1,12 +1,12 @@
 import React from 'react';
-import { ROUTE_NAME } from '../../constants/routeName';
+import { ROUTES } from '../../constants/routes';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Home, GameDetail } from '../../components/screens';
 import { COLOR_PALETTE } from '../../constants/colorPalette';
 
 export type ParamList = {
-  [ROUTE_NAME.HOME]: undefined;
-  [ROUTE_NAME.GAME_DETAIL]: undefined;
+  [ROUTES.HOME]: undefined;
+  [ROUTES.GAME_DETAIL]: undefined;
 };
 
 const Stack = createStackNavigator<ParamList>();
@@ -14,7 +14,7 @@ const Stack = createStackNavigator<ParamList>();
 export const HomeStack = () => {
   return (
     <Stack.Navigator
-      initialRouteName={ROUTE_NAME.HOME}
+      initialRouteName={ROUTES.HOME}
       screenOptions={{
         headerStyle: { backgroundColor: COLOR_PALETTE.PRIMARY },
         headerTintColor: COLOR_PALETTE.ACCENT,
@@ -22,12 +22,12 @@ export const HomeStack = () => {
       }}
     >
       <Stack.Screen
-        name={ROUTE_NAME.HOME}
+        name={ROUTES.HOME}
         component={Home}
         options={{ title: 'ホーム' }}
       />
       <Stack.Screen
-        name={ROUTE_NAME.GAME_DETAIL}
+        name={ROUTES.GAME_DETAIL}
         component={GameDetail}
         options={{ title: '試合詳細' }}
       />

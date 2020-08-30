@@ -1,12 +1,12 @@
 import React from 'react';
-import { ROUTE_NAME } from '../../constants/routeName';
+import { ROUTES } from '../../constants/routes';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Player, PlayerDetail } from '../../components/screens';
 import { COLOR_PALETTE } from '../../constants/colorPalette';
 
 export type ParamList = {
-  [ROUTE_NAME.PLAYERS]: undefined;
-  [ROUTE_NAME.PLAYER_DETAIL]: undefined;
+  [ROUTES.PLAYERS]: undefined;
+  [ROUTES.PLAYER_DETAIL]: undefined;
 };
 
 const Stack = createStackNavigator<ParamList>();
@@ -14,7 +14,7 @@ const Stack = createStackNavigator<ParamList>();
 export const PlayerStack = () => {
   return (
     <Stack.Navigator
-      initialRouteName={ROUTE_NAME.PLAYERS}
+      initialRouteName={ROUTES.PLAYERS}
       screenOptions={{
         headerStyle: { backgroundColor: COLOR_PALETTE.PRIMARY },
         headerTintColor: COLOR_PALETTE.ACCENT,
@@ -22,12 +22,12 @@ export const PlayerStack = () => {
       }}
     >
       <Stack.Screen
-        name={ROUTE_NAME.PLAYERS}
+        name={ROUTES.PLAYERS}
         component={Player}
         options={{ title: '選手一覧' }}
       />
       <Stack.Screen
-        name={ROUTE_NAME.PLAYER_DETAIL}
+        name={ROUTES.PLAYER_DETAIL}
         component={PlayerDetail}
         options={{ title: '選手詳細' }}
       />

@@ -2,10 +2,10 @@ import React from 'react';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { ParamList } from '../../../routes/HomeStack';
 import { View, Text, Button } from 'react-native';
-import { ROUTE_NAME } from '../../../constants/routeName';
+import { ROUTES } from '../../../constants/routes';
 
 type Props = {
-  navigation: StackNavigationProp<ParamList, typeof ROUTE_NAME.GAME_DETAIL>;
+  navigation: StackNavigationProp<ParamList, typeof ROUTES.GAME_DETAIL>;
 };
 
 export const GameDetail = (props: Props) => {
@@ -14,7 +14,7 @@ export const GameDetail = (props: Props) => {
       <Text>試合詳細</Text>
       <Button
         title="ホームへ"
-        onPress={() => props.navigation.navigate(ROUTE_NAME.HOME)}
+        onPress={() => props.navigation.navigate(ROUTES.HOME)}
       />
     </View>
   );

@@ -1,4 +1,4 @@
-export const ROUTE_NAME = {
+export const ROUTES = {
   HOME: 'HOME',
   GAME_DETAIL: 'GAME_DETAIL',
   PLAYERS: 'PLAYERS',
